@@ -1,0 +1,277 @@
+nav.navbar {
+    margin-top: 50px; /* Increase this value to add more margin */
+    margin-bottom: 75px;
+    
+}
+
+/* Custom styles for the hero headline */
+#hero h1 {
+    font-size: 6rem; /* Larger font size */
+    font-family: 'Poppins', sans-serif; /* Custom font */
+    line-height: 1.5; /* Adjusted line height */
+    color: #333; /* Optional: Change text color */
+}
+
+#hero p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* 400 corresponds to the "Regular" weight in Poppins */
+    font-size: 1.5rem; /* Optional: Adjust the size of the text */
+    color: #333; /* Optional: Change text color */
+    line-height: 1.5; /* Optional: Adjust line height for better readability */
+}
+
+/* Define the keyframes for the pop-up animation */
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%); /* Start from below (off-screen) */
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10%); /* Slight overshoot for a "pop" effect */
+    }
+    100% {
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+/* Apply the animation to the h1 and p in the hero section */
+#hero h1 {
+    animation: popUp 1.5s ease-out 0.3s forwards; /* 0.8s duration, 0.3s delay */
+}
+
+#hero p {
+    animation: popUp 1.5s ease-out 0.3s forwards; /* 0.8s duration, 0.5s delay for staggered effect */
+}
+
+
+
+
+.profile-img {
+    border-radius: 50%;
+    height: 400px;
+}
+
+
+#resume p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* 400 corresponds to the "Regular" weight in Poppins */
+    font-size: 1.3rem; /* Optional: Adjust the size of the text */
+    color: #333; /* Optional: Change text color */
+    line-height: 1.5; /* Optional: Adjust line height for better readability */
+}
+
+/* Container for the skill bars */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Each skill bar takes up 48% of the width (2 columns) */
+.skill-bar {
+    flex: 0 0 48%; /* 48% width, no growing or shrinking */
+    margin-bottom: 20px;
+}
+
+/* The bar wrapper */
+.bar {
+    background-color: #e0e0e0; /* Light grey background */
+    border-radius: 5px;
+    overflow: hidden; /* Ensure rounded corners */
+    position: relative;
+    height: 25px;
+}
+
+/* The fill of the bar */
+.bar-fill {
+    background-color: #333; /* Default color (Bootstrap primary color) */
+    height: 100%;
+    width: 0; /* Start with 0 width */
+    border-radius: 5px;
+    transition: width 1s ease-out; /* Smooth animation */
+}
+
+/* Bar fill animation on page load */
+.skill-bar:hover .bar-fill {
+    width: 100%;
+    transition: width 2s ease-out;
+}
+
+/* Adjust text styling for the skill labels */
+.skill-bar h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Media query to center skill bars on small screens */
+@media (max-width: 768px) {
+    .skills-container {
+        justify-content: center; /* Center the content */
+    }
+    
+    .skill-bar {
+        flex: 0 0 80%; /* Make the bars narrower on small screens */
+    }
+}
+
+#skills {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* 400 corresponds to the "Regular" weight in Poppins */
+    font-size: 1rem; /* Optional: Adjust the size of the text */
+    color: #333; /* Optional: Change text color */
+    line-height: 1.5; /* Optional: Adjust line height for better readability */
+}
+
+#skills h1 {
+    font-weight: bold
+}
+
+#portfolio {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* 400 corresponds to the "Regular" weight in Poppins */
+    font-size: 1rem; /* Optional: Adjust the size of the text */
+    color: #333; /* Optional: Change text color */
+    line-height: 1.5; /* Optional: Adjust line height for better readability */
+}
+
+#portfolio h1 {
+    font-weight: bold
+}
+
+#socials {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* 400 corresponds to the "Regular" weight in Poppins */
+    font-size: 2rem; /* Optional: Adjust the size of the text */
+    color: #333; /* Optional: Change text color */
+    line-height: 1.5; /* Optional: Adjust line height for better readability */
+}
+
+#socials h1 {
+    font-weight: bold
+}
+
+footer{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* 400 corresponds to the "Regular" weight in Poppins */
+    line-height: 1.5;
+}
+
+/* Base styles for small screens */
+@media (max-width: 576px) {
+    nav.navbar {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 100%;
+        height: auto;
+    }
+
+    #resume p {
+        font-size: 1rem; /* Optional: Adjust the size of the text */
+
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        background-size: cover;
+        background-position: center;
+        height: auto;
+    }
+}
+
+/* For medium screens and up (tablets and small desktops) */
+@media (min-width: 577px) and (max-width: 992px) {
+    nav.navbar {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #hero h1 {
+        font-size: 4rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .profile-img {
+        width: 80%;
+        height: auto;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill-bar {
+        width: 45%;
+        margin-bottom: 15px;
+    }
+
+    .card {
+        height: auto;
+    }
+}
+
+/* For large screens (desktops and larger) */
+@media (min-width: 993px) {
+    nav.navbar {
+        margin-top: 50px;
+        margin-bottom: 75px;
+    }
+
+    #hero h1 {
+        font-size: 6rem;
+    }
+
+    #hero p {
+        font-size: 1.5rem;
+    }
+
+    .profile-img {
+        width: 60%;
+        height: auto;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .skill-bar {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+    }
+}
